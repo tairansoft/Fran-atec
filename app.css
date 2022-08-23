@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    background-color: rgb(4, 67, 255);
+    color: azure;
+    padding: 30px;
+    text-align: center;
+    font: normal 30px Arial;
+}
+
+.corpo {
+    flex: 1 0 auto;
+    padding-left: 10px;
+}
+
+.rodape {
+    flex-shrink: 0;
+    background-color: rgb(4, 67, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.input {
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+}
+
+.button {
+    height: 45px;
+    width: 45px;
+   
+}
+

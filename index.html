@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRENTE BOOT</title>
+
+  <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+  <header class="nav">
+      <p1>Sorridente</p1>
+  </header>
+
+  <section class="corpo">
+    <div id ="res"></div>
+  </section>
+  
+  <footer class="rodape">
+      
+      <input type="text" class="input" name="txtvel" placeholder="Digite aqui sua mensagem" id="texpaís">
+      <input type="button" class="button" value=">" onclick="calcular()">
+    </div>   
+    </footer>
+    <script>
+      function calcular() {
+          var txtv = window.document.querySelector('input#texpaís')
+          var res = window.document.querySelector('div#res')
+          var país = (txtv.value)
+          res.innerHTML = `<p>${país}</p>`
+  
+          if (país == 'Oi'|| país == 'oi'|| país == 'bom dia' || país == 'ola' || país == 'boa noite' || país == 'boa tarde' ) {
+              res.innerHTML += `<p>Olá seja bem vindo(a), vou começar seu atendimento. Meu
+                  nome é joana, vou te passar algumas opções:</br>
+                  Digite <strong>01</strong> para Recursos Humanos</br>
+                  Digite <strong>02</strong> Para falar com Sara</br>
+                  Digite <strong>03</strong> para Financeiro</br>
+                  Digite <strong>04</strong> para Instalação</p>`
+          }
+          
+          else if(país == '01') {
+              res.innerHTML += `<p>Bem vindo ao Recursos Humanos</p>`
+          }
+
+          else if(país == '02') {
+              res.innerHTML += `<p><a href='https://wa.me/5582981276106'>Falar Sara</a>
+              </br></br>ou digite <strong>menu</strong> para voltar</p>`
+          }
+
+          else if(país == 'menu') {
+              res.innerHTML += `<p>
+                  Digite <strong>01</strong> para Recursos Humanos</br>
+                  Digite <strong>02</strong> Para falar com Sara</br>
+                  Digite <strong>03</strong> para Financeiro</br>
+                  Digite <strong>04</strong> para Instalação</p>`
+          }
+
+          else if(país == '03') {
+              res.innerHTML += `<p>Noso horário de atendimento é de Segunda a sexta 
+                  das 08h às 18h</p>`
+          }
+
+          else {
+              res.innerHTML += `<p>Descupe não entendi. Digite uma opção válida:</br>
+                  Digite <strong>01</strong> para Recursos Humanos</br>
+                  Digite <strong>02</strong> Para falar com Sara</br>
+                  Digite <strong>03</strong> para Financeiro</br>
+                  Digite <strong>04</strong> para Instalação</p>`
+              }    
+      }
+
+  </script>
+
+</body>
+</html>
